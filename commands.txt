@@ -1,0 +1,21 @@
+https://hub.docker.com/ - all images via docker registry
+docker images - list of images
+docker rm $(docker ps -aq) - delete all docker containers
+docker run hello-world - run hello-world image to show docker works properly
+docker run hello-world -d application_uses_hello-world
+docker ps - running containers
+docker run -p 27017:27017 -d mongo - open 27071 port in container to connect, you can forward several ports, using -p several times
+docker logs -f 9df8c6577e29 - container_name
+docker image inspect mongo - information about image, view all layers
+docker images -q --no-trunc - only layers information
+docker stop image_id - stop the container, after stopping and running you loose all data
+docker run --name some-mongo -v /my/own/datadir:/data/db -d mongo:tag - save all data to local machine to restore container state
+docker run -p 27017:27017 --name mongo -d mongo -v D:/docker/db:/data/db
+docker ps -a - show latest created containers
+docker logs c0a57d5dc345 - container id - to se logs from this container
+docker system prune - delete all containers
+sudo docker start mongo - start stopped container using container name
+docker run -e MY_ENV_VAR_NAME=env_var_val -p 27017:27017 --name mongo -d mongo
+docker kill $(docker ps -q) - stop all docker containers
+docker exec -it <container name> bash
+
