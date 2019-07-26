@@ -18,4 +18,6 @@ sudo docker start mongo - start stopped container using container name
 docker run -e MY_ENV_VAR_NAME=env_var_val -p 27017:27017 --name mongo -d mongo
 docker kill $(docker ps -q) - stop all docker containers
 docker exec -it <container name> bash
-
+docker run -d centos tail -f /dev/null - run docker container and executes tail -f /dev/nul command that prevents docker file of executing for all commands.
+docker exec -it <container_name> bash - run any bash command
+docker build -t spring-boot-docker . -build docker file, with tag value = spring-boot-docker
